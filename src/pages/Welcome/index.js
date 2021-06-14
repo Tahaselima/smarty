@@ -1,11 +1,11 @@
 import React, {useContext} from 'react';
 import {ThemeContext, themes} from '../../contexts/ThemeContext'
-import Welcome from '../../components/svg/Welcome'
+import { Welcome } from '../../components/svg/index'
 import styled from 'styled-components';
 
 
 
-export function Linklist() {
+export function Welcomes() {
   // eslint-disable-next-line no-unused-vars
   const {theme} = useContext(ThemeContext);
   const Wrapper = styled.div`
@@ -39,4 +39,4 @@ export function Linklist() {
   );
 }
 
-export default Linklist;
+export default Welcomes;

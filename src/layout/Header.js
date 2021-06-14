@@ -2,8 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { ThemeContext, themes } from '../contexts/ThemeContext'
 import Switch from "react-switch";
-import Moon from "../components/svg/Moon"
-import Sun from "../components/svg/Sun"
+import {Moon,Sun} from "../components/svg/index"
 
 
 // eslint-disable-next-line

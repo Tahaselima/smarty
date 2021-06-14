@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ThemeContext, themes } from '../../../../contexts/ThemeContext'
 import {Wrapper} from './styles'
-import NotFound from '../../../../components/svg/NotFound'
+import {NotFound} from '../../../../components/svg/index'
 
 export function EmptyData() {
   const {theme} = useContext(ThemeContext)

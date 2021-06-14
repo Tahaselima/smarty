@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { ThemeContext, themes } from '../contexts/ThemeContext'
 import { WidgetWrapper, Modal } from './styles'
-import Pencil from '../components/svg/Pencil'
-import Cross from '../components/svg/Cross'
+import {Pencil, Cross} from '../components/svg/index'
 import Input from '../components/Input/index'
 import Button from '../components/Button/index'
 import { useHistory } from "react-router-dom";

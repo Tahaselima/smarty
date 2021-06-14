@@ -3,9 +3,9 @@ import { ProductInfo, ProductVariant, EmptyData } from './components/index'
 import { useParams } from "react-router-dom";
 import { ProductWrapper } from "./styled"
 import SmartyServices from "../../services/SmartyServices"
-import Loading from '../../components/svg/Loading'
+import {Loading} from '../../components/svg/index'
 
-export function Newlink() {
+export function Product() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState({});
   const {id, merchantCode} = useParams()
@@ -19,6 +19,7 @@ export function Newlink() {
         setLoading(false)
       })
       .catch((error) => {
+        setData(false)
         setLoading(false)
       })
   }, [id])
@@ -59,4 +60,4 @@ export function Newlink() {
   );
 }
 
-export default Newlink;
+export default Product;

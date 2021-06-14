@@ -10,8 +10,10 @@ export const Wrapper = styled.div`
     flex-direction:column;
     justify-content:center;
     width:33%;
-    color: ${props => (props.secondText)}
-    
+    color: ${props => (props.secondText)};
+    @media only screen and (max-width: 768px) {
+        width:100%;
+    }
 `;
 export const Description = styled.div`
     margin-top: 20px;

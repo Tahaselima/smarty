@@ -20,6 +20,13 @@ export const Button = styled.button`
     border: 1px solid ${props => props.primary};
     color: ${props => props.primaryText};
   }
+  &:disabled,
+  &[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: no-drop;
+  }
   & span {
     display: flex;
     align-items: center;

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ToastProvider } from 'react-toast-notifications';
 import { ThemeContext, themes} from '../contexts/ThemeContext'
 import { Styled } from './styles';
 import Header from './Header';
 import Content from './Content';
+import Widget from './Widget';
 import {useLocalStorage} from '../hooks/index'
 import { createGlobalStyle } from 'styled-components'
 
@@ -20,18 +20,13 @@ const BasicLayout = ({children}) => {
 		<ThemeContext.Provider value={{theme, setTheme}}>
       		<GlobalStyle theme={themes[theme]} />
 			<Styled theme={themes[theme]}>
-				<ToastProvider 
-					autoDismiss
-					placement='top-center'
-					autoDismissTimeout={5000}
-					>
 					<div className="public-layout">
 							<Header/>
 							<Content >
 								{children}
 							</Content>
+							<Widget/>
 					</div>
-				</ToastProvider>
 			</Styled>
 		</ThemeContext.Provider>
 	)

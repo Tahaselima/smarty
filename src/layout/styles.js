@@ -142,3 +142,52 @@ export const Button = styled.button`
     align-items: center;
   }
 `;
+
+export const WidgetWrapper = styled.div`
+  width: 50px;
+  height: 50px;
+  background-color: ${props => props.second};
+  box-shadow: -5px 5px ${props => props.primaryText};
+  position: fixed;
+  top: 40%;
+  right:0;
+  cursor:pointer;
+  transition: visibility 0.3s linear,opacity 0.3s linear;
+  visibility: ${props => props.visible};
+  opacity: ${props => props.visible === 'visible' ? 1 : 0};
+  z-index:0;
+  & > button {
+    cursor:pointer;
+    border: 0;
+    background-color: transparent;
+    & > svg {
+      margin-left: 5px;
+      margin-top: 10px;
+    }
+  }
+`;
+
+export const Modal = styled.div`
+  width: 200px;
+  height: 300px;
+  background-color: ${props => props.second};
+  box-shadow: -5px 5px ${props => props.primaryText};
+  transition: visibility 0.3s linear,opacity 0.3s linear;
+  visibility: ${props => props.visible};
+  opacity: ${props => props.visible === 'visible' ? 1 : 0};
+  position: fixed;
+  top: 30%;
+  right:0;
+  & > Input {
+      width: 100px;
+  }
+  & > button {
+    cursor:pointer;
+    border: 0;
+    background-color: transparent;
+    & > svg {
+      margin-left: 5px;
+      margin-top: 10px;
+    }
+  }
+`;

@@ -1,8 +1,8 @@
-import Linklist from '../index';
+import Welcome from '../index';
 // eslint-disable-next-line
 export default [
   {
-    component: Linklist,
+    component: Welcome,
     exact: true,
     layout: 'public',
     path: '/',

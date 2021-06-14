@@ -13,7 +13,13 @@ export function Welcomes() {
     justify-content: center;
     align-items:center;
     @media only screen and (max-width: 768px) {
-      flex-direction: column
+      flex-direction: column;
+    }
+    & > svg {
+      @media only screen and (max-width: 768px) {
+        width:100%;
+        height:100%;
+      }
     }
     & > div{
       & > h1 {
